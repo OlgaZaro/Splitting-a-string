@@ -1,0 +1,19 @@
+/* С помощью метода String[] split(CharSequence input) класса Pattern
+разделяем строку на массив подстрок по определенному разделителю.
+Например, мы хотим выделить из строки отдельные слова */
+
+
+
+import java.util.regex.Pattern;
+ 
+public class Solution {
+ 
+    public static void main(String[] args) {
+         
+        String input = "Hello Java! Hello JavaScript! JavaSE 8.";
+        Pattern pattern = Pattern.compile("[ ,.!?]");
+        String[] words = pattern.split(input);
+        for(String word:words)
+            System.out.println(word);
+    }   
+}
